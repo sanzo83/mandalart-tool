@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+rails製のマンダラート作成サービスです。（作成中）
 
-Things you may want to cover:
+## ローカルでの動かし方
 
-* Ruby version
+### dbの起動
+- doc/dev/docker/docker-compose.ymlがあるのでそれを起動
+```
+docker-compose build
+docker-compose up -d
+```
 
-* System dependencies
+### railsアプリの起動
+- カレントディレクトリでサーバー起動
+```
+rails s
+```
 
-* Configuration
+http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+にアクセス
