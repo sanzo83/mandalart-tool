@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:12.1-alpine
+    container_name: pgdb
+    # 任意のパスワード
+    environment:
+      POSTGRES_USER: mandalart
+      POSTGRES_PASSWORD: user
+    # ボリューム
+    volumes:
+      - pgsql-data:/var/lib/postgresql/data
+    # ホスト側は任意のポート
+    ports:
+      - 5432:5432
+
+# データベース用永続化ボリューム
+volumes:
+  pgsql-data:
