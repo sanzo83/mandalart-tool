@@ -12,6 +12,12 @@ docker-compose build
 docker-compose up -d
 ```
 
+### ライブラリインストール
+```
+bundle install
+yarn install
+```
+
 ### railsアプリの起動
 - カレントディレクトリでサーバー起動
 ```
