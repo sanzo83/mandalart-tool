@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV.fetch("POSTGRES_HOST", "localhost") %>
-  username: mandalart
-  password: user
+  username: <%= ENV.fetch("RAILS_DB_USER", "mandalart") %>
+  password: <%= ENV.fetch("RAILS_DB_PASSWORD", "user") %>
 
 development:
   <<: *default

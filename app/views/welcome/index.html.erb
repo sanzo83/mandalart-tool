@@ -1,10 +1,7 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-<% if user_signed_in? %>
-  <%= link_to 'プロフィール変更', edit_user_registration_path %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'ユーザー登録', new_user_registration_path %>
-  <%= link_to 'ログイン', new_user_session_path %>
-<% end %>
+<div class="jumbotron mt-3">
+  <h1 class="display-4">mandalart-tool</h1>
+  <p class="lead">アイデアを量産できる。マンダラート思考法ツール。</p>
+  <hr class="my-4">
+  <%= link_to 'ユーザー登録', new_user_registration_path, role:"button", class:"btn btn-primary" %>
+  <%= link_to 'ログイン', new_user_session_path, role:"button", class:"btn btn-primary" %>
+</div>
