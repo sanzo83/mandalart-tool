@@ -1,0 +1,2 @@
+class MandalartMain < ApplicationRecord
+end

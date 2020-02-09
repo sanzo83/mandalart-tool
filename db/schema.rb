@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_29_145620) do
+ActiveRecord::Schema.define(version: 2020_02_09_031114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mandalart_mains", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "goal", null: false
+    t.bigint "mandalart_sub_id_1"
+    t.bigint "mandalart_sub_id_2"
+    t.bigint "mandalart_sub_id_3"
+    t.bigint "mandalart_sub_id_4"
+    t.bigint "mandalart_sub_id_5"
+    t.bigint "mandalart_sub_id_6"
+    t.bigint "mandalart_sub_id_7"
+    t.bigint "mandalart_sub_id_8"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mandalart_subs", force: :cascade do |t|
+    t.bigint "mandalart_main_id", null: false
+    t.string "goal_sub", null: false
+    t.string "term1", null: false
+    t.string "term2", null: false
+    t.string "term3", null: false
+    t.string "term4", null: false
+    t.string "term5", null: false
+    t.string "term6", null: false
+    t.string "term7", null: false
+    t.string "term8", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
