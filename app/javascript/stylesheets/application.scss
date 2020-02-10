@@ -1,1 +1,31 @@
 @import "~bootstrap/scss/bootstrap";
+
+div {
+  .mandalartbox {
+    height: 200px;
+  }
+  .mandalartboxmini {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .mandalarteditcontainer {
+    min-width: 1200px;
+  }
+}
+.mandalartinput {
+  text-align: center;
+  margin-top: 80px;
+}
+.mandalarttext {
+  text-align: center;
+}
+span {
+  word-break: break-all;
+}

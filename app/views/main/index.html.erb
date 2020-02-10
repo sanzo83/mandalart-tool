@@ -1,1 +1,30 @@
-main
+<div class="card">
+  <div class="card-header">
+    一覧
+  </div>
+  <div class="card-body">
+    <!-- 作成したマンダラート一覧 -->
+    <table class="table">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>目標</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @records.each do |record| %>
+      <tr>
+        <td><%= record.id %></td>
+        <td><%= record.data['goal'] %></td>
+        <td>
+          <a class="btn btn-success" href="/main/edit?record_id=<%= record.id %>" role="button">詳細</a>
+          <a class="btn btn-danger" href="/main/delete?record_id=<%= record.id %>" role="button">削除</a>
+        </td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <!-- 作成したマンダラート一覧ここまで -->
+  </div>
+</div>
