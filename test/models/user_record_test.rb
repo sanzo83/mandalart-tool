@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MandalartMainTest < ActiveSupport::TestCase
+class UserRecordTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

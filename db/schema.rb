@@ -10,39 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_031114) do
+ActiveRecord::Schema.define(version: 2020_02_10_015153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mandalart_mains", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "goal", null: false
-    t.bigint "mandalart_sub_id_1"
-    t.bigint "mandalart_sub_id_2"
-    t.bigint "mandalart_sub_id_3"
-    t.bigint "mandalart_sub_id_4"
-    t.bigint "mandalart_sub_id_5"
-    t.bigint "mandalart_sub_id_6"
-    t.bigint "mandalart_sub_id_7"
-    t.bigint "mandalart_sub_id_8"
+  create_table "records", force: :cascade do |t|
+    t.jsonb "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "mandalart_subs", force: :cascade do |t|
-    t.bigint "mandalart_main_id", null: false
-    t.string "goal_sub", null: false
-    t.string "term1", null: false
-    t.string "term2", null: false
-    t.string "term3", null: false
-    t.string "term4", null: false
-    t.string "term5", null: false
-    t.string "term6", null: false
-    t.string "term7", null: false
-    t.string "term8", null: false
+  create_table "user_records", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "record_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_id"], name: "index_user_records_on_record_id"
+    t.index ["user_id"], name: "index_user_records_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

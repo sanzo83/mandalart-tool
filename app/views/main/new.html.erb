@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">
+    新規作成
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <p>※まずメインとなる叶えたい目標とそのためのアプローチを記入してください</p>
+      </div>
+      <%= form_tag("/main/create", method: "post") do %>
+        <div class="row mt-3">
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target1" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target2" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target3" value="" required class="form-control mandalartinput">
+          </div>
+        </div>
+        <div class="row">
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target4" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="goal" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target5" value="" required class="form-control mandalartinput">
+          </div>
+        </div>
+        <div class="row">
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target6" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target7" value="" required class="form-control mandalartinput">
+          </div>
+          <div class="border col-3 mandalartbox">
+            <input type="text" name="main_target8" value="" required class="form-control mandalartinput">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <input name="submit" type="submit" value="登録" class="btn btn-primary"/>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

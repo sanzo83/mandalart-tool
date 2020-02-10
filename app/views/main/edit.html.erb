@@ -1,0 +1,408 @@
+<div class="card">
+  <div class="card-header">
+    詳細
+  </div>
+  <div class="card-body">
+    <div class="container mandalarteditcontainer">
+      <div class="row">
+        <p>※各ブロックをクリックすると編集できます</p>
+      </div>
+    <%= form_tag("/main/update", method: "post") do %>
+      <input type="hidden" name="record_id" value="<%= @record_id %>">
+        <div class="row mt-3">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target1_1'] %></span>
+            <input type="hidden" name="target1_1" value="<%= @record.data['target1_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target1_2'] %></span>
+            <input type="hidden" name="target1_2" value="<%= @record.data['target1_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target1_3'] %></span>
+            <input type="hidden" name="target1_3" value="<%= @record.data['target1_3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target2_1'] %></span>
+            <input type="hidden" name="target2_1" value="<%= @record.data['target2_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target2_2'] %></span>
+            <input type="hidden" name="target2_2" value="<%= @record.data['target2_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target2_3'] %></span>
+            <input type="hidden" name="target2_3" value="<%= @record.data['target2_3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target3_1'] %></span>
+            <input type="hidden" name="target3_1" value="<%= @record.data['target3_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target3_2'] %></span>
+            <input type="hidden" name="target3_2" value="<%= @record.data['target3_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target3_3'] %></span>
+            <input type="hidden" name="target3_3" value="<%= @record.data['target3_3'] %>">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target1_4'] %></span>
+            <input type="hidden" name="target1_4" value="<%= @record.data['target1_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target1"><%= @record.data['main_target1'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target1_5'] %></span>
+            <input type="hidden" name="target1_5" value="<%= @record.data['target1_5'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target2_4'] %></span>
+            <input type="hidden" name="target2_4" value="<%= @record.data['target2_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target2"><%= @record.data['main_target2'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target2_5'] %></span>
+            <input type="hidden" name="target2_5" value="<%= @record.data['target2_5'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target3_4'] %></span>
+            <input type="hidden" name="target3_4" value="<%= @record.data['target3_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target3"><%= @record.data['main_target3'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target3_5'] %></span>
+            <input type="hidden" name="target3_5" value="<%= @record.data['target3_5'] %>">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target1_6'] %></span>
+            <input type="hidden" name="target1_6" value="<%= @record.data['target1_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target1_7'] %></span>
+            <input type="hidden" name="target1_7" value="<%= @record.data['target1_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target1_8'] %></span>
+            <input type="hidden" name="target1_8" value="<%= @record.data['target1_8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target2_6'] %></span>
+            <input type="hidden" name="target2_6" value="<%= @record.data['target2_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target2_7'] %></span>
+            <input type="hidden" name="target2_7" value="<%= @record.data['target2_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target2_8'] %></span>
+            <input type="hidden" name="target2_8" value="<%= @record.data['target2_8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target3_6'] %></span>
+            <input type="hidden" name="target3_6" value="<%= @record.data['target3_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target3_7'] %></span>
+            <input type="hidden" name="target3_7" value="<%= @record.data['target3_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target3_8'] %></span>
+            <input type="hidden" name="target3_8" value="<%= @record.data['target3_8'] %>">
+          </div>
+
+        </div>
+        <div class="row mt-3">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target4_1'] %></span>
+            <input type="hidden" name="target4_1" value="<%= @record.data['target4_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target4_2'] %></span>
+            <input type="hidden" name="target4_2" value="<%= @record.data['target4_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target4_3'] %></span>
+            <input type="hidden" name="target4_3" value="<%= @record.data['target4_3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['main_target1'] %></span>
+            <input type="hidden" name="main_target1" value="<%= @record.data['main_target1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['main_target2'] %></span>
+            <input type="hidden" name="main_target2" value="<%= @record.data['main_target2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['main_target3'] %></span>
+            <input type="hidden" name="main_target3" value="<%= @record.data['main_target3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target5_1'] %></span>
+            <input type="hidden" name="target5_1" value="<%= @record.data['target5_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target5_2'] %></span>
+            <input type="hidden" name="target5_2" value="<%= @record.data['target5_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target5_3'] %></span>
+            <input type="hidden" name="target5_3" value="<%= @record.data['target5_3'] %>">
+          </div>
+
+        </div>
+        <div class="row">
+
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target4_4'] %></span>
+            <input type="hidden" name="target4_4" value="<%= @record.data['target4_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target4"><%= @record.data['main_target4'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target4_5'] %></span>
+            <input type="hidden" name="target4_5" value="<%= @record.data['target4_5'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span id="span_main_target4"><%= @record.data['main_target4'] %></span>
+            <input type="hidden" name="main_target4" value="<%= @record.data['main_target4'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['goal'] %></span>
+            <input type="hidden" name="goal" value="<%= @record.data['goal'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['main_target5'] %></span>
+            <input type="hidden" name="main_target5" value="<%= @record.data['main_target5'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target5_4'] %></span>
+            <input type="hidden" name="target5_4" value="<%= @record.data['target5_4'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span id="span_main_target5"><%= @record.data['main_target5'] %></span>
+            <input type="hidden" name="main_target5" value="<%= @record.data['main_target5'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target5_5'] %></span>
+            <input type="hidden" name="target5_5" value="<%= @record.data['target5_5'] %>">
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target4_6'] %></span>
+            <input type="hidden" name="target4_6" value="<%= @record.data['target4_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target4_7'] %></span>
+            <input type="hidden" name="target4_7" value="<%= @record.data['target4_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target4_8'] %></span>
+            <input type="hidden" name="target4_8" value="<%= @record.data['target4_8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['main_target6'] %></span>
+            <input type="hidden" name="main_target6" value="<%= @record.data['main_target6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['main_target7'] %></span>
+            <input type="hidden" name="main_target7" value="<%= @record.data['main_target7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['main_target8'] %></span>
+            <input type="hidden" name="main_target8" value="<%= @record.data['main_target8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target5_6'] %></span>
+            <input type="hidden" name="target5_6" value="<%= @record.data['target5_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target5_7'] %></span>
+            <input type="hidden" name="target5_7" value="<%= @record.data['target5_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target5_8'] %></span>
+            <input type="hidden" name="target5_8" value="<%= @record.data['target5_8'] %>">
+          </div>
+
+        </div>
+        <div class="row mt-3">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target6_1'] %></span>
+            <input type="hidden" name="target6_1" value="<%= @record.data['target6_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target6_2'] %></span>
+            <input type="hidden" name="target6_2" value="<%= @record.data['target6_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target6_3'] %></span>
+            <input type="hidden" name="target6_3" value="<%= @record.data['target6_3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target7_1'] %></span>
+            <input type="hidden" name="target7_1" value="<%= @record.data['target7_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target7_2'] %></span>
+            <input type="hidden" name="target7_2" value="<%= @record.data['target7_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target7_3'] %></span>
+            <input type="hidden" name="target7_3" value="<%= @record.data['target7_3'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target8_1'] %></span>
+            <input type="hidden" name="target8_1" value="<%= @record.data['target8_1'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target8_2'] %></span>
+            <input type="hidden" name="target8_2" value="<%= @record.data['target8_2'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target8_3'] %></span>
+            <input type="hidden" name="target8_3" value="<%= @record.data['target8_3'] %>">
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target6_4'] %></span>
+            <input type="hidden" name="target6_4" value="<%= @record.data['target6_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target6"><%= @record.data['main_target6'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target6_5'] %></span>
+            <input type="hidden" name="target6_5" value="<%= @record.data['target6_5'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target7_4'] %></span>
+            <input type="hidden" name="target7_4" value="<%= @record.data['target7_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target7"><%= @record.data['main_target7'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target7_6'] %></span>
+            <input type="hidden" name="target7_6" value="<%= @record.data['target7_6'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target8_4'] %></span>
+            <input type="hidden" name="target8_4" value="<%= @record.data['target8_4'] %>">
+          </div>
+          <div class="border mandalartboxmini">
+            <span id="span_main_target8"><%= @record.data['main_target8'] %></span>
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target8_5'] %></span>
+            <input type="hidden" name="target8_5" value="<%= @record.data['target8_5'] %>">
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target6_6'] %></span>
+            <input type="hidden" name="target6_6" value="<%= @record.data['target6_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target6_7'] %></span>
+            <input type="hidden" name="target6_7" value="<%= @record.data['target6_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target6_8'] %></span>
+            <input type="hidden" name="target6_8" value="<%= @record.data['target6_8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target7_6'] %></span>
+            <input type="hidden" name="target7_6" value="<%= @record.data['target7_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target7_7'] %></span>
+            <input type="hidden" name="target7_7" value="<%= @record.data['target7_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target7_8'] %></span>
+            <input type="hidden" name="target7_8" value="<%= @record.data['target7_8'] %>">
+          </div>
+
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target8_6'] %></span>
+            <input type="hidden" name="target8_6" value="<%= @record.data['target8_6'] %>">
+          </div>
+          <div class="border mandalartboxmini" onclick="clickBox(this)">
+            <span><%= @record.data['target8_7'] %></span>
+            <input type="hidden" name="target8_7" value="<%= @record.data['target8_7'] %>">
+          </div>
+          <div class="border mandalartboxmini mr-3" onclick="clickBox(this)">
+            <span><%= @record.data['target8_8'] %></span>
+            <input type="hidden" name="target8_8" value="<%= @record.data['target8_8'] %>">
+          </div>
+
+        </div>
+      <div class="row mt-3">
+        <input name="submit" type="submit" value="登録" class="btn btn-primary"/>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<script>
+    function clickBox(obj) {
+        $obj = $(obj);
+        // 入力ダイアログを表示 ＋ 入力内容を user に代入
+        let target = window.prompt("入力してください", "")
+        if (target) {
+            $obj.children('span').text(target)
+            $obj.children('input').val(target)
+            name = $obj.children('input').attr('name')
+            const mainTargets = ['main_target1', 'main_target2', 'main_target3', 'main_target4', 'main_target5', 'main_target6', 'main_target7', 'main_target8',]
+            if (mainTargets.indexOf(name) >= 0){
+                $('#span_' + name).text(target)
+            }
+        }
+    }
+</script>
