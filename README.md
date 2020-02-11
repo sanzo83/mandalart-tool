@@ -32,3 +32,6 @@ rails s
 http://localhost:3000
 
 にアクセス
+
+## サンプルサイト
+[https://mandalart-tool.herokuapp.com/](https://mandalart-tool.herokuapp.com/)
