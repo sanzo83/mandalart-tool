@@ -1,7 +1,7 @@
 # README
 
 ## 概要
-rails製のマンダラート作成サービスです。（作成中）
+rails製のマンダラート作成サービスです。（一応動く）
 
 ## ローカルでの動かし方
 
@@ -16,6 +16,11 @@ docker-compose up -d
 ```
 bundle install
 yarn install
+```
+
+### dbマイグレート
+```
+rake db:migrate
 ```
 
 ### railsアプリの起動
