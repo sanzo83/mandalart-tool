@@ -3,13 +3,12 @@ require 'rails_helper'
 RSpec.feature "Create", type: :feature do
 
   scenario 'マンダラート新規登録から編集、削除まで' do
-    # トップページを開く
-    visit "/users/sign_in"
-    # ログインフォームにEmailとパスワードを入力する
-    fill_in 'user[email]', with: 'test1@example.com'
-    fill_in 'user[password]', with: '123456'
-    # ログインボタンをクリックする
-    click_on 'ログイン'
+    # 登録ページを開く
+    visit "/users/sign_up"
+    fill_in 'user_email', with: 'testtest@example.com'
+    fill_in 'user_password', with: '123456'
+    fill_in 'user_password_confirmation', with: '123456'
+    click_on '登録'
 
     # 新規登録画面へ
     visit "/main/new"
