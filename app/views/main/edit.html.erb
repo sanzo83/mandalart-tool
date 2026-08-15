@@ -9,8 +9,7 @@
   </div>
 </section>
 
-<%= form_with url: update_main_path, method: :patch, class: 'mandala-editor' do %>
-  <%= hidden_field_tag :record_id, @record.id %>
+<%= form_with url: update_main_path(token: @record.access_token), method: :patch, class: 'mandala-editor', data: { local_draft_key: "mandala-note-draft-#{@record.access_token}", updated_at: @record.updated_at.to_i } do %>
   <div class="mandala-board" aria-label="9x9 マンダラート編集盤">
     <% groups.each do |row| %>
       <% row.each do |group| %>
@@ -51,5 +50,13 @@
       <% end %>
     <% end %>
   </div>
-  <div class="editor-actions"><p>入力内容は「保存する」を押すまで反映されません。</p><%= submit_tag '保存する', class: 'button' %></div>
+  <div class="local-draft-notice" hidden></div>
+  <div class="editor-actions no-print">
+    <p>この環境の保存は一時的です。大事な内容はバックアップをダウンロードしてください。</p>
+    <div class="editor-actions__buttons">
+      <button type="button" class="secondary-button" data-download-backup>バックアップを保存</button>
+      <button type="button" class="secondary-button" data-print-mandala>印刷 / PDF保存</button>
+      <%= submit_tag '一時保存する', class: 'button' %>
+    </div>
+  </div>
 <% end %>

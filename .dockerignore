@@ -1,0 +1,15 @@
+.git
+.bundle
+.byebug_history
+.env
+.env.*
+config/master.key
+log/*
+tmp/*
+storage/*
+db/*.sqlite3
+db/*.sqlite3-journal
+db/*.sqlite3-*
+public/assets
+node_modules
+vendor/bundle

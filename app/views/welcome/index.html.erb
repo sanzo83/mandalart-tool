@@ -1,14 +1,23 @@
 <section class="hero">
   <div class="hero__copy">
-    <p class="eyebrow">A CLEARER WAY TO PLAN</p>
-    <h1>考えを広げて、<br>次の一歩を決める。</h1>
-    <p class="hero__lead">Mandala Note は、ひとつの目標を8つの視点へ、さらに具体的な行動へと分解するためのシンプルなノートです。</p>
-    <div class="hero__actions"><%= link_to '無料ではじめる', new_user_registration_path, class: 'button' %><%= link_to 'ログイン', new_user_session_path, class: 'text-link' %></div>
+    <p class="eyebrow">YOUR IDEAS, YOUR FILES</p>
+    <h1>考えを広げて、<br>自分の手元に残す。</h1>
+    <p class="hero__lead">Mandala Note はログイン不要のマンダラート作成ツールです。編集後はバックアップをダウンロードして、いつでも続きを開けます。</p>
+    <div class="hero__actions"><%= link_to '新しく始める', new_main_path, class: 'button' %><a href="#backup" class="text-link">バックアップを開く</a></div>
   </div>
   <div class="hero__visual" aria-hidden="true"><% 9.times do |index| %><span class="hero-tile hero-tile--<%= index %>"><%= index == 4 ? 'GOAL' : '' %></span><% end %></div>
 </section>
+
+<section id="backup" class="backup-panel">
+  <div><p class="eyebrow">OPEN A BACKUP</p><h2>以前の続きを開く。</h2><p>ダウンロードしたJSONファイルを選ぶと、編集可能な状態で復元します。</p></div>
+  <%= form_with url: import_main_path, multipart: true, class: 'backup-form' do %>
+    <%= file_field_tag :backup, accept: 'application/json,.json', required: true %>
+    <%= submit_tag 'ファイルを開く', class: 'button' %>
+  <% end %>
+</section>
+
 <section class="feature-row">
   <article><span>01</span><h2>中心を決める</h2><p>叶えたいことをひとつ、まっすぐに置きます。</p></article>
   <article><span>02</span><h2>視点を広げる</h2><p>8つのテーマで、目標への道筋を見つけます。</p></article>
-  <article><span>03</span><h2>行動に変える</h2><p>今日できる小さな一歩まで、具体化します。</p></article>
+  <article><span>03</span><h2>手元に残す</h2><p>JSONやPDFで、あなたのアイデアを保管します。</p></article>
 </section>

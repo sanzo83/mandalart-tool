@@ -3,13 +3,6 @@ require 'rails_helper'
 RSpec.feature "Create", type: :feature do
 
   scenario 'マンダラート新規登録から編集、削除まで' do
-    # 登録ページを開く
-    visit "/users/sign_up"
-    fill_in 'user_email', with: 'testtest@example.com'
-    fill_in 'user_password', with: '123456'
-    fill_in 'user_password_confirmation', with: '123456'
-    click_button '無料ではじめる'
-
     # 新規登録画面へ
     visit "/main/new"
 
@@ -29,14 +22,16 @@ RSpec.feature "Create", type: :feature do
     expect(page).to have_content 'テスト目標goal'
 
     find("input[name='target1_1']").set('テストです')
-    click_on '保存する'
+    click_on '一時保存する'
 
     # 編集機能が動いているか
     expect(find("input[name='target1_1']").value).to eq 'テストです'
 
     # 一覧画面へ
     visit "/main/index"
-    click_button '削除'
+    within(find('.record-card', text: 'テスト目標goal')) do
+      click_button '削除'
+    end
 
     # ちゃんと削除されているか
     expect(page).not_to have_content 'テスト目標goal'

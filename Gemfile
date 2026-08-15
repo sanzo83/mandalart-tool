@@ -8,7 +8,7 @@ gem 'rails', '~> 8.0.5'
 # Use SQLite as the database for Active Record
 gem 'sqlite3', '~> 2.1'
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 6.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Use Redis adapter to run Action Cable in production
@@ -22,9 +22,6 @@ gem 'sass-rails', '>= 6'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.18', require: false
 
-gem 'devise'
-gem 'devise-i18n'
-gem 'devise-i18n-views'
 gem 'rspec-rails'
 gem 'matrix'
 gem 'rexml'

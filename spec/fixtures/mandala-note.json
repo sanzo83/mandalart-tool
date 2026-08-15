@@ -1,0 +1,9 @@
+{
+  "format": "mandala-note",
+  "version": 1,
+  "data": {
+    "goal": "バックアップした目標",
+    "main_target1": "テーマ1",
+    "target1_1": "具体的な行動"
+  }
+}

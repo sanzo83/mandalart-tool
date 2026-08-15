@@ -13,15 +13,9 @@
         <%= link_to root_path, class: 'brand' do %><span class="brand__mark">M</span><span>Mandala Note</span><% end %>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">メニュー</button>
         <nav id="site-navigation" class="site-navigation" aria-label="メインナビゲーション">
-          <% if user_signed_in? %>
-            <%= link_to 'マイノート', main_index_path %>
-            <%= link_to '新しく作る', new_main_path, class: 'button button--small' %>
-            <%= link_to 'アカウント', edit_user_registration_path %>
-            <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-button' %>
-          <% else %>
-            <%= link_to 'ログイン', new_user_session_path %>
-            <%= link_to '無料ではじめる', new_user_registration_path, class: 'button button--small' %>
-          <% end %>
+          <%= link_to '一時ノート', main_index_path %>
+          <%= link_to 'バックアップを開く', root_path(anchor: 'backup') %>
+          <%= link_to '新しく作る', new_main_path, class: 'button button--small' %>
         </nav>
       </div>
     </header>

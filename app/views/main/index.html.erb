@@ -1,8 +1,8 @@
 <section class="page-heading">
   <div>
     <p class="eyebrow">MY NOTES</p>
-    <h1>考えを、行動にほどく。</h1>
-    <p>大きな目標を中心に置き、8つの視点から次の一歩を見つけましょう。</p>
+    <h1>このブラウザで開いたノート。</h1>
+    <p>ここにある内容は一時的です。大切なノートは編集画面からJSONバックアップを保存してください。</p>
   </div>
   <%= link_to '＋ 新しいマンダラート', new_main_path, class: 'button' %>
 </section>
@@ -10,14 +10,15 @@
 <% if @records.any? %>
   <section class="record-grid" aria-label="マンダラート一覧">
     <% @records.each do |record| %>
+      <% data = record.data || {} %>
       <article class="record-card">
         <div class="record-card__number"><%= format('%02d', record.id) %></div>
         <p class="eyebrow">MANDALA NOTE</p>
-        <h2><%= record.data['goal'].presence || '無題の目標' %></h2>
+        <h2><%= data['goal'].presence || '無題の目標' %></h2>
         <p class="record-card__date">作成日 <%= l(record.created_at.to_date, format: :long) %></p>
         <div class="record-card__actions">
-          <%= link_to '開く →', edit_main_path(record_id: record.id), class: 'text-link' %>
-          <%= button_to '削除', delete_main_path(record_id: record.id), method: :delete, class: 'quiet-button', data: { confirm: 'このマンダラートを削除しますか？' } %>
+          <%= link_to '開く →', edit_main_path(token: record.access_token), class: 'text-link' %>
+          <%= button_to '削除', delete_main_path(token: record.access_token), method: :delete, class: 'quiet-button', data: { confirm: 'このマンダラートを削除しますか？' } %>
         </div>
       </article>
     <% end %>
@@ -26,7 +27,7 @@
   <section class="empty-state">
     <p class="eyebrow">FIRST NOTE</p>
     <h2>最初の目標を書いてみよう。</h2>
-    <p>たったひとつの中心目標から、行動の地図が広がります。</p>
+    <p>新しいノートを作るか、JSONバックアップから再開できます。</p>
     <%= link_to 'マンダラートを作る', new_main_path, class: 'button' %>
   </section>
 <% end %>

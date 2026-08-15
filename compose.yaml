@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      target: development
+    command: >
+      sh -c 'rm -f tmp/pids/server.pid &&
+      bundle exec rails db:prepare &&
+      bundle exec rails server -b 0.0.0.0'
+    environment:
+      RAILS_ENV: development
+      RAILS_LOG_TO_STDOUT: "true"
+      PORT: "3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/rails
+    tty: true
+    stdin_open: true
