@@ -1,50 +1,31 @@
-<div class="card">
-  <div class="card-header">
-    新規作成
+<section class="editor-header">
+  <div>
+    <%= link_to '← マイノート', main_index_path, class: 'back-link' %>
+    <p class="eyebrow">STEP 1 OF 2</p>
+    <h1>中心となる目標を置く。</h1>
+    <p>達成したいことを真ん中に。そのために大切な8つのテーマを周りに書きます。</p>
   </div>
-  <div class="card-body">
-    <div class="container">
-      <div class="row">
-        <p>※まずメインとなる叶えたい目標とそのためのアプローチを記入してください</p>
-      </div>
-      <%= form_tag("/main/create", method: "post") do %>
-        <div class="row mt-3">
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target1" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target2" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target3" value="" required class="form-control mandalartinput">
-          </div>
-        </div>
-        <div class="row">
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target4" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="goal" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target5" value="" required class="form-control mandalartinput">
-          </div>
-        </div>
-        <div class="row">
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target6" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target7" value="" required class="form-control mandalartinput">
-          </div>
-          <div class="border col-3 mandalartbox">
-            <input type="text" name="main_target8" value="" required class="form-control mandalartinput">
-          </div>
-        </div>
-        <div class="row mt-3">
-          <input name="submit" type="submit" value="登録" class="btn btn-primary"/>
-        </div>
+</section>
+
+<%= form_with url: create_main_path, class: 'mandala-form' do %>
+  <div class="mandala mandala--setup" aria-label="マンダラート入力欄">
+    <% positions = [[1, 2, 3], [4, nil, 5], [6, 7, 8]] %>
+    <% positions.flatten.each do |number| %>
+      <% if number %>
+        <label class="mandala-cell mandala-cell--theme">
+          <span class="sr-only">テーマ <%= number %></span>
+          <%= text_field_tag "main_target#{number}", nil, placeholder: "テーマ #{number}", required: true %>
+        </label>
+      <% else %>
+        <label class="mandala-cell mandala-cell--goal">
+          <span>叶えたいこと</span>
+          <%= text_field_tag :goal, nil, placeholder: '例：自分の店を開く', required: true %>
+        </label>
       <% end %>
-    </div>
+    <% end %>
   </div>
-</div>
+  <div class="form-footer">
+    <p>作成後、各テーマをさらに8つの具体的な行動へ広げられます。</p>
+    <%= submit_tag '次へ：行動を広げる →', class: 'button' %>
+  </div>
+<% end %>

@@ -1,7 +1,14 @@
-<div class="jumbotron mt-3">
-  <h1 class="display-4">mandalart-tool（β）</h1>
-  <p class="lead">アイデアを量産できる。マンダラート思考法ツール。</p>
-  <hr class="my-4">
-  <%= link_to 'ユーザー登録', new_user_registration_path, role:"button", class:"btn btn-primary" %>
-  <%= link_to 'ログイン', new_user_session_path, role:"button", class:"btn btn-primary" %>
-</div>
+<section class="hero">
+  <div class="hero__copy">
+    <p class="eyebrow">A CLEARER WAY TO PLAN</p>
+    <h1>考えを広げて、<br>次の一歩を決める。</h1>
+    <p class="hero__lead">Mandala Note は、ひとつの目標を8つの視点へ、さらに具体的な行動へと分解するためのシンプルなノートです。</p>
+    <div class="hero__actions"><%= link_to '無料ではじめる', new_user_registration_path, class: 'button' %><%= link_to 'ログイン', new_user_session_path, class: 'text-link' %></div>
+  </div>
+  <div class="hero__visual" aria-hidden="true"><% 9.times do |index| %><span class="hero-tile hero-tile--<%= index %>"><%= index == 4 ? 'GOAL' : '' %></span><% end %></div>
+</section>
+<section class="feature-row">
+  <article><span>01</span><h2>中心を決める</h2><p>叶えたいことをひとつ、まっすぐに置きます。</p></article>
+  <article><span>02</span><h2>視点を広げる</h2><p>8つのテーマで、目標への道筋を見つけます。</p></article>
+  <article><span>03</span><h2>行動に変える</h2><p>今日できる小さな一歩まで、具体化します。</p></article>
+</section>

@@ -12,11 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2020_02_10_015153) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "records", force: :cascade do |t|
-    t.jsonb "data"
+    t.json "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

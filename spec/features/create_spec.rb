@@ -8,7 +8,7 @@ RSpec.feature "Create", type: :feature do
     fill_in 'user_email', with: 'testtest@example.com'
     fill_in 'user_password', with: '123456'
     fill_in 'user_password_confirmation', with: '123456'
-    click_on '登録'
+    click_button '無料ではじめる'
 
     # 新規登録画面へ
     visit "/main/new"
@@ -23,21 +23,20 @@ RSpec.feature "Create", type: :feature do
     fill_in 'main_target7', with: 'テスト目標7'
     fill_in 'main_target8', with: 'テスト目標8'
 
-    click_on '登録'
+    click_on '次へ：行動を広げる →'
 
-    # ちゃんと一覧に登録されているか
+    # 作成直後に編集画面へ遷移する
     expect(page).to have_content 'テスト目標goal'
 
-    click_on '詳細'
-    find("input[name$='target1_1']", visible: false).set('テストです')
-    click_on '登録'
+    find("input[name='target1_1']").set('テストです')
+    click_on '保存する'
 
     # 編集機能が動いているか
-    expect(page).to have_content 'テストです'
+    expect(find("input[name='target1_1']").value).to eq 'テストです'
 
     # 一覧画面へ
     visit "/main/index"
-    click_on '削除'
+    click_button '削除'
 
     # ちゃんと削除されているか
     expect(page).not_to have_content 'テスト目標goal'
