@@ -15,5 +15,11 @@ services:
       - "3000:3000"
     volumes:
       - .:/rails
+      - rails_log:/rails/log
+      - rails_tmp:/rails/tmp
     tty: true
     stdin_open: true
+
+volumes:
+  rails_log:
+  rails_tmp:
