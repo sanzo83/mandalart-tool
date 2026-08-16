@@ -9,8 +9,11 @@ gem 'rails', '~> 8.0.5'
 gem 'sqlite3', '~> 2.1'
 # Use Puma as the app server
 gem 'puma', '~> 6.4'
-# Serve the existing CSS and JavaScript assets without a Sass compiler
-gem 'sprockets-rails'
+# Rails 8 defaults for assets and browser-side behavior
+gem 'propshaft'
+gem 'importmap-rails'
+gem 'turbo-rails'
+gem 'stimulus-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

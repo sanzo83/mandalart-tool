@@ -18,7 +18,7 @@
         <p class="record-card__date">作成日 <%= l(record.created_at.to_date, format: :long) %></p>
         <div class="record-card__actions">
           <%= link_to '開く →', edit_main_path(token: record.access_token), class: 'text-link' %>
-          <%= button_to '削除', delete_main_path(token: record.access_token), method: :delete, class: 'quiet-button', data: { confirm: 'このマンダラートを削除しますか？' } %>
+          <%= button_to '削除', delete_main_path(token: record.access_token), method: :delete, class: 'quiet-button', data: { turbo_confirm: 'このマンダラートを削除しますか？' } %>
         </div>
       </article>
     <% end %>
