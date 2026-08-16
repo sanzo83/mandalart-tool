@@ -25,8 +25,9 @@
 変更の内容に応じて、可能な範囲で以下を実行する。
 
 ```sh
-rbenv exec bundle exec rails test
 rbenv exec bundle exec rspec
+rbenv exec bundle exec rubocop
+docker compose exec -T -e RAILS_ENV=test web bundle exec rspec
 RAILS_ENV=production rbenv exec bundle exec rails assets:precompile
 git diff --check
 ```

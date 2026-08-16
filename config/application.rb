@@ -17,5 +17,14 @@ module MandalartTool
     # the framework and any gems in your application.
     config.i18n.default_locale = :ja
 
+    config.generators do |generators|
+      generators.test_framework :rspec,
+                                fixtures: true,
+                                request_specs: true,
+                                controller_specs: false,
+                                view_specs: false,
+                                helper_specs: false,
+                                routing_specs: false
+    end
   end
 end

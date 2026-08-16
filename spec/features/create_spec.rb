@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature "Create", type: :feature do
-
+RSpec.feature 'Create', type: :feature do
   scenario 'マンダラート新規登録から編集、削除まで' do
     # 新規登録画面へ
-    visit "/main/new"
+    visit '/main/new'
 
     fill_in 'goal', with: 'テスト目標goal'
     fill_in 'main_target1', with: 'テスト目標1'
@@ -28,13 +27,12 @@ RSpec.feature "Create", type: :feature do
     expect(find("input[name='target1_1']").value).to eq 'テストです'
 
     # 一覧画面へ
-    visit "/main/index"
+    visit '/main/index'
     within(find('.record-card', text: 'テスト目標goal')) do
       click_button '削除'
     end
 
     # ちゃんと削除されているか
     expect(page).not_to have_content 'テスト目標goal'
-
   end
 end

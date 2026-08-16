@@ -1,12 +1,15 @@
 class MainController < ApplicationController
-  DATA_KEYS = ['goal'] + (1..8).flat_map { |number| ["main_target#{number}"] + (1..8).map { |item| "target#{number}_#{item}" } }.freeze
+  DATA_KEYS = ['goal'] + (1..8).flat_map { |number|
+    ["main_target#{number}"] + (1..8).map { |item|
+      "target#{number}_#{item}"
+    }
+  }.freeze
 
   def index
     @records = Record.where(access_token: recent_record_tokens).order(created_at: :desc)
   end
 
-  def new
-  end
+  def new; end
 
   def create
     record = Record.create!(data: record_data)

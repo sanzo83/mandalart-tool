@@ -10,10 +10,10 @@ gem 'sqlite3', '~> 2.1'
 # Use Puma as the app server
 gem 'puma', '~> 6.4'
 # Rails 8 defaults for assets and browser-side behavior
-gem 'propshaft'
 gem 'importmap-rails'
-gem 'turbo-rails'
+gem 'propshaft'
 gem 'stimulus-rails'
+gem 'turbo-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -25,23 +25,22 @@ gem 'stimulus-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.18', require: false
 
-gem 'rspec-rails'
 gem 'matrix'
 gem 'rexml'
-# Rails 6.1's parallel test runner is compatible with Minitest 5.
-gem 'minitest', '~> 5.25'
+gem 'rspec-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.5', '< 4.0'
+  gem 'web-console', '>= 3.3.0'
   # Keep file watching compatible with Ruby 3.2.
   gem 'ffi', '~> 1.17'
+  gem 'rubocop', '>= 1.72', require: false
 end
 
 group :test do
@@ -53,4 +52,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

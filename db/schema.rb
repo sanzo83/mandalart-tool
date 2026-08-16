@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_08_16_000001) do
-  create_table "records", force: :cascade do |t|
-    t.json "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "access_token", null: false
-    t.index ["access_token"], name: "index_records_on_access_token", unique: true
+ActiveRecord::Schema[8.0].define(version: 20_260_816_000_001) do
+  create_table 'records', force: :cascade do |t|
+    t.json 'data'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'access_token', null: false
+    t.index ['access_token'], name: 'index_records_on_access_token', unique: true
   end
 end

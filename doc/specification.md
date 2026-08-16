@@ -77,7 +77,7 @@ Mandala Note は、ログインなしでマンダラートを作成・編集す�
 | アセット配信 | Propshaft |
 | JavaScript | Importmap、Turbo、Stimulus |
 | CSS | ブラウザでそのまま利用できる通常のCSS |
-| テスト | Minitest、RSpec |
+| テスト | RSpec |
 | ローカル実行 | Docker Compose |
 | 本番想定 | Google Cloud Run |
 
@@ -116,8 +116,9 @@ Cloud Runのコンテナファイルシステムは一時的です。現在のpr
 ## 8. 主な検証コマンド
 
 ```sh
-rbenv exec bundle exec rails test
 rbenv exec bundle exec rspec
+rbenv exec bundle exec rubocop
+docker compose exec -T -e RAILS_ENV=test web bundle exec rspec
 RAILS_ENV=production rbenv exec bundle exec rails assets:precompile
 docker compose up --build
 git diff --check
