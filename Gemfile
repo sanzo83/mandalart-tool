@@ -8,7 +8,7 @@ gem 'rails', '~> 8.0.5'
 # Use SQLite as the database for Active Record
 gem 'sqlite3', '~> 2.1'
 # Use Puma as the app server
-gem 'puma', '~> 6.4'
+gem 'puma', '~> 7.2', '>= 7.2.1'
 # Rails 8 defaults for assets and browser-side behavior
 gem 'importmap-rails'
 gem 'propshaft'
