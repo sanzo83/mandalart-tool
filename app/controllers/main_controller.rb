@@ -33,7 +33,7 @@ class MainController < ApplicationController
   def update
     @record = find_record
     @record.update!(data: @record.data.merge(record_data))
-    redirect_to edit_main_path(record_id: @record.id), notice: '保存しました。'
+    redirect_to edit_main_path(token: @record.access_token), notice: '保存しました。'
   end
 
   def delete
