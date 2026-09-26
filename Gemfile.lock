@@ -260,7 +260,7 @@ GEM
       parser (>= 3.3.7.2)
       prism (~> 1.7)
     ruby-progressbar (1.13.0)
-    rubyzip (2.2.0)
+    rubyzip (3.4.0)
     securerandom (0.4.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
