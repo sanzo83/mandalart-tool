@@ -2,7 +2,7 @@
 
 ## プロジェクト概要
 
-- Rails 8.0 / Ruby 3.2.11 / SQLite のマンダラート作成アプリ。
+- Rails 8.1 / Ruby 4.0.6 / SQLite のマンダラート作成アプリ。
 - ログイン機能はない。ノートはランダムなアクセストークンを含むURLで編集する。
 - 永続的に残したい成果物は、利用者がJSONバックアップとしてダウンロードし、トップページから復元する設計。
 
@@ -15,7 +15,7 @@
 
 ## ローカル開発
 
-- 必要なRubyは `.ruby-version` に従う（現在は `3.2.11`）。
+- 必要なRubyは `.ruby-version` に従う（現在は `4.0.6`）。
 - Docker Desktopを起動して `docker compose up --build` を実行し、`http://localhost:3000` を開く。
 - Dockerを使わない場合は、依存関係を入れたうえで `bundle exec rails db:prepare` と `bundle exec rails server` を使う。
 - 開発用SQLite DBは `db/development.sqlite3`。PostgreSQLサービスは使わない。
